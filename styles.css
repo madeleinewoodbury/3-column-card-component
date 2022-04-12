@@ -12,7 +12,6 @@ body {
   font-size: 15px;
   font-weight: 400;
   width: 100vw;
-  height: 100vh;
 }
 
 main {
@@ -24,12 +23,135 @@ main {
 }
 
 .container {
-  width: 800px;
+  width: 862px;
+  height: 500px;
   display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+.card.orange {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+
+.card.cyan {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card.dark-cyan {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 10px 10px 0;
+}
+
+.card div {
+  padding: 10px 0;
+}
+
+.card .icon {
+  height: 10%;
+}
+
+.card .title {
+  height: 10%;
+  padding: 20px 0;
+}
+
+.card .title h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: hsl(0, 0%, 95%);
+}
+
+.card .content {
+  height: 60%;
+}
+
+.card .content p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.75;
+}
+
+.card .btn-container {
+  height: 20%;
+}
+
+.card .btn-container button {
+  outline: none;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  padding: 12px 20px;
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card.orange .btn-container button {
+  color: hsl(31, 77%, 52%);
+}
+
+.card.cyan .btn-container button {
+  color: hsl(184, 100%, 22%);
+}
+
+.card.dark-cyan .btn-container button {
+  color: hsl(179, 100%, 13%);
+}
+
+.card .btn-container button:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
 }
 
 footer {
   width: 100%;
-  height: 100px;
   text-align: center;
+}
+
+footer a {
+  color: hsl(184, 100%, 22%);
+}
+
+footer a:hover {
+  color: hsl(31, 77%, 52%);
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 750px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 330px;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .card.orange {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card.dark-cyan {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 10px 10px;
+  }
+
+  footer {
+    margin: 20px auto;
+    padding: 20px;
+    width: 330px;
+  }
 }
